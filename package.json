@@ -1,0 +1,259 @@
+{
+  "name": "ai-rules-manager",
+  "displayName": "AI Rules Manager — Claude, Cursor, Windsurf, Copilot",
+  "description": "Unified manager for AI assistant rule files: CLAUDE.md, AGENTS.md, .cursorrules, .windsurfrules, .github/copilot-instructions.md. Edit, sync, and generate with templates.",
+  "version": "0.1.0",
+  "publisher": "matil",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matil/ai-rules-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matil/ai-rules-manager/issues"
+  },
+  "homepage": "https://github.com/matil/ai-rules-manager#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets",
+    "Education"
+  ],
+  "keywords": [
+    "ai",
+    "claude",
+    "claude.md",
+    "cursor",
+    "cursorrules",
+    "windsurf",
+    "copilot",
+    "agents.md",
+    "agent",
+    "mcp",
+    "anthropic",
+    "openai",
+    "rules",
+    "prompt",
+    "system-prompt",
+    "instructions"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiRulesManager",
+          "title": "AI Rules",
+          "icon": "media/sidebar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "aiRulesManager": [
+        {
+          "id": "aiRulesManager.filesView",
+          "name": "Rule Files",
+          "icon": "media/sidebar-icon.svg",
+          "contextualTitle": "AI Rules"
+        },
+        {
+          "id": "aiRulesManager.templatesView",
+          "name": "Templates",
+          "icon": "media/sidebar-icon.svg",
+          "contextualTitle": "Templates"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "aiRulesManager.filesView",
+        "contents": "No AI rule files detected in this workspace.\n[Create a rule file](command:aiRulesManager.createRuleFile)\n[Browse templates](command:aiRulesManager.browseTemplates)\n[Learn more](https://github.com/matil/ai-rules-manager#readme)"
+      }
+    ],
+    "commands": [
+      {
+        "command": "aiRulesManager.createRuleFile",
+        "title": "AI Rules: Create Rule File",
+        "icon": "$(add)"
+      },
+      {
+        "command": "aiRulesManager.refresh",
+        "title": "AI Rules: Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "aiRulesManager.openFile",
+        "title": "AI Rules: Open File"
+      },
+      {
+        "command": "aiRulesManager.syncRules",
+        "title": "AI Rules: Sync Between Tools",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "aiRulesManager.insertTemplate",
+        "title": "AI Rules: Insert Template"
+      },
+      {
+        "command": "aiRulesManager.browseTemplates",
+        "title": "AI Rules: Browse Templates"
+      },
+      {
+        "command": "aiRulesManager.generateWithAI",
+        "title": "AI Rules: Generate with AI (Pro)",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "aiRulesManager.validate",
+        "title": "AI Rules: Validate Current File"
+      },
+      {
+        "command": "aiRulesManager.showHistory",
+        "title": "AI Rules: Show Change History (Pro)"
+      },
+      {
+        "command": "aiRulesManager.cloudSync.push",
+        "title": "AI Rules: Cloud Sync — Push (Pro)"
+      },
+      {
+        "command": "aiRulesManager.cloudSync.pull",
+        "title": "AI Rules: Cloud Sync — Pull (Pro)"
+      },
+      {
+        "command": "aiRulesManager.activateLicense",
+        "title": "AI Rules: Activate Pro License"
+      },
+      {
+        "command": "aiRulesManager.openSettings",
+        "title": "AI Rules: Open Settings",
+        "icon": "$(gear)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "aiRulesManager.createRuleFile",
+          "when": "view == aiRulesManager.filesView",
+          "group": "navigation@1"
+        },
+        {
+          "command": "aiRulesManager.syncRules",
+          "when": "view == aiRulesManager.filesView",
+          "group": "navigation@2"
+        },
+        {
+          "command": "aiRulesManager.refresh",
+          "when": "view == aiRulesManager.filesView",
+          "group": "navigation@3"
+        },
+        {
+          "command": "aiRulesManager.openSettings",
+          "when": "view == aiRulesManager.filesView",
+          "group": "navigation@4"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "aiRulesManager.openFile",
+          "when": "view == aiRulesManager.filesView && viewItem == ruleFile",
+          "group": "inline"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AI Rules Manager",
+      "properties": {
+        "aiRulesManager.autoDetect": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically detect AI rule files in workspace."
+        },
+        "aiRulesManager.tools": {
+          "type": "array",
+          "default": ["claude", "cursor", "windsurf", "copilot", "agents", "aider", "cline"],
+          "description": "Which AI tools to manage rule files for.",
+          "items": {
+            "type": "string",
+            "enum": ["claude", "cursor", "windsurf", "copilot", "agents", "aider", "cline", "continue"]
+          }
+        },
+        "aiRulesManager.licenseKey": {
+          "type": "string",
+          "default": "",
+          "description": "Pro license key. Get one at https://devtools360.xyz/ai-rules-pro"
+        },
+        "aiRulesManager.cloudSync.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable cloud sync of rule files across machines (Pro)."
+        },
+        "aiRulesManager.cloudSync.endpoint": {
+          "type": "string",
+          "default": "https://api.devtools360.xyz/ai-rules/sync",
+          "description": "Cloud sync endpoint."
+        },
+        "aiRulesManager.ai.provider": {
+          "type": "string",
+          "enum": ["anthropic", "openai", "ollama"],
+          "default": "anthropic",
+          "description": "AI provider for rule generation (Pro)."
+        },
+        "aiRulesManager.ai.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API key for AI generation. Stored locally."
+        },
+        "aiRulesManager.ai.model": {
+          "type": "string",
+          "default": "claude-sonnet-4-20250514",
+          "description": "Model to use for AI generation."
+        },
+        "aiRulesManager.history.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Track local change history of rule files (Pro)."
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "ai-rules",
+        "aliases": ["AI Rules", "ai-rules"],
+        "extensions": [".cursorrules", ".windsurfrules"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ai-rules",
+        "scopeName": "text.ai-rules",
+        "path": "./syntaxes/ai-rules.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vscode/vsce": "^2.24.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "AI Rules",
+  "scopeName": "text.ai-rules",
+  "patterns": [
+    { "include": "#headings" },
+    { "include": "#bullets" },
+    { "include": "#emphasis" },
+    { "include": "#code" },
+    { "include": "#comments" }
+  ],
+  "repository": {
+    "headings": {
+      "match": "^(#{1,6})\\s+(.+)$",
+      "captures": {
+        "1": { "name": "punctuation.definition.heading.ai-rules" },
+        "2": { "name": "entity.name.section.ai-rules" }
+      }
+    },
+    "bullets": {
+      "match": "^\\s*([-*+])\\s+",
+      "captures": {
+        "1": { "name": "punctuation.definition.list.ai-rules" }
+      }
+    },
+    "emphasis": {
+      "match": "(\\*\\*|__)([^*_]+)(\\*\\*|__)",
+      "captures": {
+        "2": { "name": "markup.bold.ai-rules" }
+      }
+    },
+    "code": {
+      "match": "`[^`]+`",
+      "name": "markup.inline.raw.ai-rules"
+    },
+    "comments": {
+      "match": "<!--.*?-->",
+      "name": "comment.block.ai-rules"
+    }
+  }
+}
