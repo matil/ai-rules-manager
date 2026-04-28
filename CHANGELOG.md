@@ -12,3 +12,6 @@
 - Cloud sync stub (endpoint configurable) — Pro.
 - License manager with offline key validation.
 - Rule file validator (secrets, size, structure).
+- Marketplace assets: banner + 4 screenshot mockups.
+- Publisher onboarding doc, Lemon Squeezy + license server setup, marketplace listing copy.
+- Cloudflare Worker license server (in `license-server/`) — webhook + verify + cloud sync endpoints.

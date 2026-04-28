@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1117"/>
+      <stop offset="100%" stop-color="#1a1d2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Glow blob -->
+  <circle cx="980" cy="320" r="180" fill="#6366f1" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="200" cy="500" r="140" fill="#a855f7" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Title -->
+  <text x="80" y="220" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="76" font-weight="800" fill="#fff" letter-spacing="-2">AI Rules Manager</text>
+  <text x="80" y="280" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="500" fill="#a3a3b8">One extension for every AI assistant's rule file.</text>
+
+  <!-- Tool badges -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#fff">
+    <rect x="80" y="350" width="180" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="170" y="378" text-anchor="middle">CLAUDE.md</text>
+
+    <rect x="275" y="350" width="170" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="360" y="378" text-anchor="middle">AGENTS.md</text>
+
+    <rect x="460" y="350" width="170" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="545" y="378" text-anchor="middle">.cursorrules</text>
+
+    <rect x="645" y="350" width="200" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="745" y="378" text-anchor="middle">.windsurfrules</text>
+
+    <rect x="80" y="410" width="280" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="220" y="438" text-anchor="middle">.github/copilot-instructions</text>
+
+    <rect x="375" y="410" width="160" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="455" y="438" text-anchor="middle">.clinerules</text>
+
+    <rect x="550" y="410" width="170" height="44" rx="22" fill="#1f2235" stroke="#3f3f5e" stroke-width="1"/>
+    <text x="635" y="438" text-anchor="middle">CONVENTIONS.md</text>
+  </g>
+
+  <!-- Right-side icon stack -->
+  <g transform="translate(960, 200)">
+    <rect x="0" y="0" width="220" height="280" rx="18" fill="#1f2235" stroke="url(#accent)" stroke-width="2"/>
+    <rect x="20" y="30" width="180" height="14" rx="4" fill="#6366f1" opacity="0.6"/>
+    <rect x="20" y="58" width="140" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="78" width="160" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="98" width="120" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="130" width="180" height="14" rx="4" fill="#a855f7" opacity="0.6"/>
+    <rect x="20" y="158" width="160" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="178" width="140" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="198" width="170" height="10" rx="4" fill="#3f3f5e"/>
+    <rect x="20" y="230" width="100" height="20" rx="6" fill="url(#accent)"/>
+    <text x="70" y="245" text-anchor="middle" font-family="ui-sans-serif, sans-serif" font-size="13" font-weight="700" fill="#fff">SYNC →</text>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="80" y="540" font-family="ui-sans-serif, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="500" fill="#6366f1">Edit · Sync · Generate · Validate</text>
+  <text x="80" y="570" font-family="ui-sans-serif, sans-serif" font-size="16" fill="#7a7a92">Free · Pro $9 one-time · matil.ai-rules-manager</text>
+</svg>

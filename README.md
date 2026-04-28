@@ -69,7 +69,14 @@ Then run `AI Rules: Activate Pro License` and paste your key.
 
 ## Repo / issues
 
-[github.com/matil/ai-rules-manager](https://github.com/matil/ai-rules-manager)
+[github.com/matil/ai-rules-manager](https://github.com/matil/ai-rules-manager) · [Roadmap board](https://github.com/users/matil/projects/9)
+
+## Docs (for maintainers)
+
+- [`docs/PUBLISHING.md`](docs/PUBLISHING.md) — VS Code marketplace publisher setup
+- [`docs/PRO_LICENSE_SETUP.md`](docs/PRO_LICENSE_SETUP.md) — Lemon Squeezy + license server
+- [`docs/MARKETPLACE_LISTING.md`](docs/MARKETPLACE_LISTING.md) — listing copy + launch posts
+- [`license-server/`](license-server/) — Cloudflare Worker for licenses + cloud sync
 
 ## License
 

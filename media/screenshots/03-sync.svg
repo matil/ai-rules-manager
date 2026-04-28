@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <rect width="1200" height="800" fill="#1e1e1e"/>
+
+  <!-- Dimmed bg -->
+  <g opacity="0.4">
+    <rect x="0" y="0" width="48" height="800" fill="#181818"/>
+    <rect x="48" y="0" width="320" height="800" fill="#252526"/>
+  </g>
+
+  <!-- Title bar context -->
+  <text x="600" y="40" text-anchor="middle" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#7a7a7a">AI Rules: Sync Between Tools</text>
+
+  <!-- Quick pick -->
+  <rect x="240" y="80" width="720" height="500" rx="6" fill="#252526" stroke="#3c3c3c"/>
+  <rect x="252" y="92" width="696" height="36" rx="2" fill="#3c3c3c"/>
+  <text x="266" y="116" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#cccccc">Target tools (TO) — pick multiple</text>
+
+  <g font-family="ui-sans-serif, sans-serif" font-size="14" fill="#cccccc">
+    <!-- multi-select with checkboxes -->
+    <g transform="translate(252, 140)">
+      <rect width="696" height="48" fill="#094771"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" fill="#6366f1"/>
+      <path d="M17 23 l3 3 l5 -7" stroke="#fff" stroke-width="2" fill="none"/>
+      <text x="42" y="22" fill="#fff">Cursor</text>
+      <text x="42" y="40" font-size="12" fill="#9cdcfe">.cursorrules</text>
+    </g>
+
+    <g transform="translate(252, 190)">
+      <rect width="696" height="48" fill="transparent"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" fill="#6366f1"/>
+      <path d="M17 23 l3 3 l5 -7" stroke="#fff" stroke-width="2" fill="none"/>
+      <text x="42" y="22">Windsurf</text>
+      <text x="42" y="40" font-size="12" fill="#7a7a7a">.windsurfrules</text>
+    </g>
+
+    <g transform="translate(252, 240)">
+      <rect width="696" height="48" fill="#2a2d2e"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" fill="#6366f1"/>
+      <path d="M17 23 l3 3 l5 -7" stroke="#fff" stroke-width="2" fill="none"/>
+      <text x="42" y="22">GitHub Copilot</text>
+      <text x="42" y="40" font-size="12" fill="#7a7a7a">.github/copilot-instructions.md</text>
+    </g>
+
+    <g transform="translate(252, 290)">
+      <rect width="696" height="48" fill="transparent"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" stroke="#6c6c6c" fill="transparent"/>
+      <text x="42" y="22">Aider</text>
+      <text x="42" y="40" font-size="12" fill="#7a7a7a">CONVENTIONS.md</text>
+    </g>
+
+    <g transform="translate(252, 340)">
+      <rect width="696" height="48" fill="transparent"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" stroke="#6c6c6c" fill="transparent"/>
+      <text x="42" y="22">Cline</text>
+      <text x="42" y="40" font-size="12" fill="#7a7a7a">.clinerules</text>
+    </g>
+
+    <g transform="translate(252, 390)">
+      <rect width="696" height="48" fill="transparent"/>
+      <rect x="14" y="16" width="14" height="14" rx="2" stroke="#6c6c6c" fill="transparent"/>
+      <text x="42" y="22">Continue</text>
+      <text x="42" y="40" font-size="12" fill="#7a7a7a">.continue/config.json</text>
+    </g>
+  </g>
+
+  <!-- OK/Cancel -->
+  <g font-family="ui-sans-serif, sans-serif" font-size="13">
+    <rect x="252" y="530" width="696" height="36" fill="#252526"/>
+    <rect x="780" y="538" width="80" height="22" rx="3" fill="#3c3c3c"/>
+    <text x="820" y="554" text-anchor="middle" fill="#cccccc">Cancel</text>
+    <rect x="868" y="538" width="80" height="22" rx="3" fill="#6366f1"/>
+    <text x="908" y="554" text-anchor="middle" fill="#fff" font-weight="600">OK (3)</text>
+  </g>
+
+  <!-- Toast preview -->
+  <g transform="translate(820, 620)">
+    <rect width="350" height="80" rx="6" fill="#252526" stroke="#3c3c3c"/>
+    <text x="20" y="32" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#cccccc">✓ Synced to 3 tool(s).</text>
+    <text x="20" y="56" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#7a7a7a">CLAUDE.md → .cursorrules, .windsurfrules,</text>
+    <text x="20" y="70" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#7a7a7a">.github/copilot-instructions.md</text>
+  </g>
+</svg>

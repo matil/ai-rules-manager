@@ -1,0 +1,13 @@
+name = "ai-rules-license-server"
+main = "src/worker.ts"
+compatibility_date = "2025-01-01"
+
+# Replace this ID after running: wrangler kv namespace create LICENSES
+[[kv_namespaces]]
+binding = "LICENSES"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Add a route once api.devtools360.xyz is set up:
+# [[routes]]
+# pattern = "api.devtools360.xyz/ai-rules/*"
+# zone_name = "devtools360.xyz"

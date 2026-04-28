@@ -15,5 +15,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": false
   },
-  "exclude": ["node_modules", "out", ".vscode-test"]
+  "exclude": ["node_modules", "out", ".vscode-test", "license-server"]
 }

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <rect width="1200" height="800" fill="#1e1e1e"/>
+
+  <!-- Dimmed background editor -->
+  <g opacity="0.4">
+    <rect x="0" y="0" width="48" height="800" fill="#181818"/>
+    <rect x="48" y="0" width="320" height="800" fill="#252526"/>
+    <rect x="368" y="0" width="832" height="36" fill="#2d2d2d"/>
+  </g>
+
+  <!-- Quick pick dialog (centered top) -->
+  <rect x="240" y="80" width="720" height="620" rx="6" fill="#252526" stroke="#3c3c3c" stroke-width="1"/>
+
+  <!-- Search box -->
+  <rect x="252" y="92" width="696" height="36" rx="2" fill="#3c3c3c"/>
+  <text x="266" y="116" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#cccccc">Choose a starting point</text>
+
+  <!-- Items -->
+  <g font-family="ui-sans-serif, sans-serif" font-size="14" fill="#cccccc">
+    <!-- selected -->
+    <rect x="252" y="140" width="696" height="48" fill="#094771"/>
+    <text x="270" y="161">✏ Empty file</text>
+    <text x="270" y="181" font-size="12" fill="#9cdcfe">Start from a blank rule file</text>
+
+    <rect x="252" y="190" width="696" height="48" fill="transparent"/>
+    <text x="270" y="211">📑 Generic — Strict &amp; Concise</text>
+    <text x="270" y="231" font-size="12" fill="#7a7a7a">A safe, concise default that works for any project.</text>
+
+    <rect x="252" y="240" width="696" height="48" fill="#2a2d2e"/>
+    <text x="270" y="261">📑 Next.js — App Router + TypeScript</text>
+    <text x="270" y="281" font-size="12" fill="#7a7a7a">Next.js 14+ with App Router, Server Components, Tailwind, shadcn/ui.</text>
+
+    <text x="270" y="311">📑 Python — Django + DRF</text>
+    <text x="270" y="331" font-size="12" fill="#7a7a7a">Modern Django + DRF with type hints and pytest.</text>
+
+    <text x="270" y="361">📑 Rust — Async (tokio + axum)</text>
+    <text x="270" y="381" font-size="12" fill="#7a7a7a">Modern async Rust web service with tokio, axum, and sqlx.</text>
+
+    <text x="270" y="411">📑 Go — Stdlib-first service</text>
+    <text x="270" y="431" font-size="12" fill="#7a7a7a">Idiomatic Go with stdlib HTTP, context, structured logging.</text>
+
+    <text x="270" y="461">📑 Rails — Modern (Hotwire + RSpec)</text>
+    <text x="270" y="481" font-size="12" fill="#7a7a7a">Rails 7+ with Hotwire, Tailwind, RSpec.</text>
+
+    <text x="270" y="511">📑 Monorepo — pnpm + Turborepo</text>
+    <text x="270" y="531" font-size="12" fill="#7a7a7a">TypeScript monorepo with pnpm workspaces and Turborepo.</text>
+
+    <text x="270" y="561">📑 Data Science — Python + Jupyter</text>
+    <text x="270" y="581" font-size="12" fill="#7a7a7a">Pandas, scikit-learn, notebooks with discipline.</text>
+
+    <text x="270" y="611">📑 React Native — Expo</text>
+    <text x="270" y="631" font-size="12" fill="#7a7a7a">Expo + TypeScript + React Navigation.</text>
+
+    <g fill="#a78bfa">
+      <text x="270" y="661">🔒 Enterprise Security &amp; Compliance (Pro)</text>
+    </g>
+    <text x="270" y="681" font-size="12" fill="#7a7a7a">Strict rules for regulated/enterprise environments.</text>
+  </g>
+
+  <!-- Footer hint -->
+  <rect x="240" y="700" width="720" height="2" fill="#3c3c3c"/>
+  <text x="262" y="722" font-family="ui-sans-serif, sans-serif" font-size="11" fill="#7a7a7a">Type to filter · ↑↓ to navigate · ↵ to select · Esc to cancel</text>
+</svg>
