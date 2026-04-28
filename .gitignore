@@ -7,3 +7,9 @@ dist/
 *.log
 .env
 .env.local
+-e 
+# license-server build artifacts
+license-server/src/*.js
+license-server/src/*.js.map
+license-server/dist/
+license-server/.wrangler/
